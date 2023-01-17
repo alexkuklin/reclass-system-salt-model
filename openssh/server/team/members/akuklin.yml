@@ -1,0 +1,19 @@
+parameters:
+  linux:
+    system:
+      user:
+        akuklin:
+          email: akuklin@mirantis.com
+          enabled: true
+          full_name: Alexey Kuklin
+          home: /home/akuklin
+          name: akuklin
+          sudo: ${_param:linux_system_user_sudo}
+  openssh:
+    server:
+      user:
+        akuklin:
+          enabled: true
+          public_keys:
+          - key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ5WzyLbabnO5nNW9dDtFGtAHjt1tlt6RLZdG4Xt+0WD akuklin@mirantis.com
+          user: ${linux:system:user:akuklin}
